@@ -27,14 +27,14 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav ml-auto">
-            <a class="nav-link" href="#home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link" href="#carous">About Us </a>
-            <a class="nav-link" href="#menu">Main Menu</a>
-            <a class="nav-link" href="#contact">Contact Us</a>
+            <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link active" href="#carous">About Us </a>
+            <a class="nav-link active" href="#menu">Main Menu</a>
+            <a class="nav-link active" href="#contact">Contact Us</a>
           </div>
             <div class="ml-auto">
-            <a class="nav-link active btn btn-success d-inline" href="login.php">Login</a>
-            <a class="nav-link active btn btn-success d-inline" href="register.php">Sign Up</a>
+            <a class="nav-link active btn bg-success btn-success d-inline" href="login.php">Login</a>
+            <a class="nav-link active btn bg-success btn-success d-inline" href="register.php">Sign Up</a>
           </div>
         </div>
       </nav>
