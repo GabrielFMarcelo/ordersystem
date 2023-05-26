@@ -8,8 +8,194 @@ html{
     scroll-behavior: smooth;
 }
 
+body{
+    background-color: black;
+}
+
+.navbar{
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.logo{
+  height: 30px;
+  width: 30px;
+}
+
 .home{
   min-height: 100vh;
-  background-image: url(../img/bgg.png);
+  background-image: linear-gradient(rgba(25, 25, 25, 0.19),rgba(25, 25, 25, 0.19)), url(https://cdn.pixabay.com/photo/2018/10/22/22/37/meat-3766592_1280.jpg);
+  background-position:center;
+  background-size: cover;
+}
+
+.head{
+  padding-top: 250px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 15px;
+  letter-spacing: 2px;
+}
+.heads{
+  font-size: 30px;
+  font-family: "Architectural";
+}
+.par{
+  font-family: 'Roboto', sans-serif;
+  width: 50%;
+  text-align: justify;
+}
+
+.btn-book:active,
+.btn-book:hover{
+  color: white;
+}
+
+.about{
+  min-height: 70vh;
+  background-image: linear-gradient(rgba(25, 25, 25, 0.59),rgba(25, 25, 25, 0.59)), url(https://cdn.pixabay.com/photo/2017/09/14/16/20/fine-dining-2749512_1280.jpg);
+  font-family: 'Roboto', sans-serif;
+  background-size: cover;
+}
+
+.tag{
+  font-family: "Architectural";
+  text-transform: uppercase;
+  font-size: 50px;
+}
+.tags{
+  width: 70%;
+  text-align: center;
+}
+
+.subtitle{
+  font-size: 20px;
+  padding-top: 60px;
+}
+.subtitles{
+  font-size: 20px;
+  padding-top: 60px;
+}
+
+.menu{
+  min-height: 100vh;
+  font-family: 'Roboto', sans-serif;
+}
+
+.fnt{
+  font-family: "Architectural";
+}
+
+.card-block{
+	transition: all 0.2s ease-in-out !important;
+	border-radius: 24px;
+	&:hover{
+		transform: translateY(-5px);
+		box-shadow: none;
+		opacity: 0.9;
+	}
+}
+
+.card-text{
+
+}
+
+.contact{
+  min-height: 100vh;
+  background-image: url(../img/contact.png);
   background-position: center;
+  background-size: cover;
+}
+
+footer{
+  background-color: black;
+  color: white;
+}
+
+@media (max-width:820px) {
+  .carous{
+    min-height: inherit;
+  }
+  .home{
+    background-image: linear-gradient(rgba(25, 25, 25, 0.59),rgba(25, 25, 25, 0.59)), url(https://cdn.pixabay.com/photo/2018/10/22/22/37/meat-3766592_1280.jpg);
+  }
+  .head, .heads, .par, .btn-book{
+    text-align: center;
+  }
+  .par{
+    width: 85%;
+    padding-left: 65px;
+  }
+  .btn-book{
+    margin-left: 112px;
+  }
+  .tag{
+    font-size: 30px;
+  }
+  .tags{
+    padding-top: 10px;
+    width: 90%;
+    text-align: justify;
+  }
+  .subtitle{
+    font-size: 10px;
+    padding-top: 20px;
+    margin-bottom: 10px;
+  }
+  .contact{
+    min-height:27vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+
+.reveal {
+  position: relative;
+  opacity: 0;
+}
+
+.reveal.active {
+  opacity: 1;
+}
+.active.fade-bottom {
+  animation: fade-bottom 1s ease-in;
+}
+.active.fade-left {
+  animation: fade-left 1s ease-in;
+}
+.active.fade-right {
+  animation: fade-right 1s ease-in;
+}
+@keyframes fade-bottom {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes fade-left {
+  0% {
+    transform: translateX(-100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fade-right {
+  0% {
+    transform: translateX(100px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
