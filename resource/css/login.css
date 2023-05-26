@@ -1,0 +1,41 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+.navbar{
+  background-color: black;
+  text-transform: uppercase;
+  font-weight: lighter;
+  letter-spacing: 1px;
+}
+
+.logo{
+  height: 30px;
+  width: 30px;
+}
+
+.fnt{
+  font-family: "Architectural";
+}
+
+.login{
+  background-image: linear-gradient(rgba(25, 25, 25, 0.39),rgba(25, 25, 25, 0.39)), url(https://cdn.pixabay.com/photo/2017/06/23/22/58/restaurant-2436221_1280.jpg);
+  background-size:cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+}
+
+.m1, .or{
+  font-weight: normal;
+  font-size: 15px;
+}
+.appbt{
+  background-color: black;
+}

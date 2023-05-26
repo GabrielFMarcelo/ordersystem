@@ -11,49 +11,48 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
   <title>Registrar Portal</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
-  <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
+  <link rel="stylesheet" type="text/css"  href="resource/css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
-        <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
-          <a class="navbar-brand " href="https://malolos.ceu.edu.ph/">
-            <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
-              alt="mdb logo"><h3 class="ib">
-          </a>
-             <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-             <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-             <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-        </nav>
-           <div class="container mt-5">
+  <header class="">
+    <nav class="navbar navbar-expand-lg text-light navbar-dark fixed-top box-shadow py-3">
+      <img class="logo img-fluid mr-2" src="https://cdn.pixabay.com/photo/2012/04/30/10/39/cow-44720_1280.png" alt="">
+      <a class="navbar-brand -5" href="#">texas steakhouse</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="ml-auto">
+        <a class="nav-link active btn btn-success d-inline" href="login.php">Login</a>
+        <a class="nav-link active btn btn-success d-inline" href="register.php">Sign Up</a>
+      </div>
+      </div>
+    </nav>
+  </header>
+           <div class="container-fluid mt-5 login">
             <div class="row justify-content-center">
-                <div class="col-8 ">
-
-                    <form class="text-center border border-light p-5 shadow puff-in-center" action="" method="post" >
-                    <p class="h4 mb-4">Sign in</p>
+                <div class="col-md-4">
+                  <div class="jumbotron py-2 shadow bg-light border border-light rounded pt-5 mt-5 pb-4">
+                    <p class="h4">Welcome!</p>
+                    <h5 class="text-muted m1 mb-4">Sign up or log in to continue</h5>
+                    <form class="" action="" method="post" >
                     <?php logd();?>
-                    <input type="text" id="username" class="form-control mb-4" name="username" placeholder="Enter Username" required>
-                    <input type="password" id="defaultLoginFormPassword" class="form-control mb-4" placeholder="Enter Password" name ="password" required>
+                    <input type="text" id="username" class="form-control mb-2" name="username" placeholder="Enter Username" required>
+                    <input type="password" id="defaultLoginFormPassword" class="form-control" placeholder="Enter Password" name ="password" required>
                     <div class="d-flex justify-content-around">
                     </div>
                     <input type =hidden name="token" value="<?php echo Token::generate(); ?>">
-                    <input  type="submit"  class="btn btn-dark btn-block my-4"value="Login"/>
+                    <input  type="submit"  class="btn btn-success btn-block my-4"value="Login"/>
                     </form>
-
-
-                    <footer id="sticky-footer" class="py-4 bg-dark text-white-50 fixed-bottom slide-in-right">
-                      <div class="container text-center">
-                          <div class="row">
-                              <div class="col col-sm-5 text-left">
-                                  <small>Copyright &copy;Centro Escolar University     Office of the Registrar 2019</small>
-                              </div>
-                              <div class="col text-right">
-                                  <small>Created by: Reymart Bolasoc, Amelia Valencia , James Mangalile, Kenneth De Leon , Pamela Reyes , Ellen Mijares</small>
-                              </div>
-                          </div>
-                      </div>
+                    <h6 class="text-center text-muted mt-2 or">or</h6>
+                    <button href="" class="btn btn-block btn-primary">Continue with Facebook<i class="fa fa-facebook-f float-left pt-1"></i></button>
+                    <button href="" class="btn btn-block btn-light border border-dark">Continue with Google<i class="fa fa-google float-left pt-1"></i></button>
+                    <button href="" class="btn btn-block appbt text-light">Continue with Apple<i class="fa fa-apple float-left pt-1"></i></button>
+                    <button href="" class="btn btn-block bg-info text-light">Register<i class="fa fa-edge float-left pt-1"></i></button>
+                  </div>
                 </div>
-            </div>
-          </div>
-        </footer>
+
         <script src="vendor/js/jquery.js"></script>
         <script src="vendor/js/popper.js"></script>
         <script src="vendor/js/bootstrap.min.js"></script>
