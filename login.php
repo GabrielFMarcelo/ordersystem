@@ -8,11 +8,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Registrar Portal</title>
+  <title>Login or Sign Up</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
   <link rel="stylesheet" type="text/css"  href="resource/css/login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="resource/img/favicon.ico" type="image/x-icon">
 </head>
 <body>
   <header class="">
@@ -24,8 +27,8 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="ml-auto">
-        <a class="nav-link active btn btn-success d-inline" href="login.php">Login</a>
-        <a class="nav-link active btn btn-success d-inline" href="register.php">Sign Up</a>
+        <a class="nav-link active btn bg-success btn-success d-inline" href="login.php">Login</a>
+        <a class="nav-link active btn bg-success btn-success d-inline" href="register.php">Sign Up</a>
       </div>
       </div>
     </nav>
@@ -33,7 +36,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
            <div class="container-fluid mt-5 login">
             <div class="row justify-content-center">
                 <div class="col-md-4">
-                  <div class="jumbotron py-2 shadow bg-light border border-light rounded pt-5 mt-5 pb-4">
+                  <div class="jumbotron py-2 shadow bg-light border border-light rounded pt-5 mt-5 pb-4 puff-in-center">
                     <p class="h4">Welcome!</p>
                     <h5 class="text-muted m1 mb-4">Sign up or log in to continue</h5>
                     <form class="" action="" method="post" >

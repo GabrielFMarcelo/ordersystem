@@ -31,6 +31,7 @@
             <a class="nav-link active" href="#carous">About Us </a>
             <a class="nav-link active" href="#menu">Main Menu</a>
             <a class="nav-link active" href="#contact">Contact Us</a>
+            <a class="nav-link active" href="logout.php">Log Out</a>
           </div>
           <div class="ml-auto">
             <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>

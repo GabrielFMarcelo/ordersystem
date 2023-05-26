@@ -10,30 +10,32 @@ $view = new view;
  <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Registrar Portal</title>
+   <title>Register</title>
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
    <link href="vendor/css/all.css" rel="stylesheet">
-   <link rel="stylesheet" type="text/css"  href="resource/css/styles.css">
+   <link rel="stylesheet" type="text/css"  href="resource/css/register.css">
    <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap-select.min.css">
+
+   <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+   <link rel="icon" href="resource/img/favicon.ico" type="image/x-icon">
 
  </head>
  <body>
-         <nav class="navbar navbar-dark bg-white shadow-sm slide-in-left">
-           <a class="navbar-brand" href="https://malolos.ceu.edu.ph/">
-             <img src="resource/img/logo.jpg" height="70" class="d-inline-block align-top"
-               alt="mdb logo"><h3 class="ib">
-           </a>
-           <a href="exportTableAdmin.php"><i class="fas fa-table ceucolor"></i></a>
-           <a href="statsAdmin.php"><i class="fas fa-chart-line ceucolor"></i></a>
-           <a href="userVerificationAdmin.php"><i class="fas fa-user-plus ceucolor"></i></a>
-           <a href="verificationAdmin.php"><i class="fas fa-user-graduate ceucolor"></i></a>
-           <a href="viewAlumniAdmin.php"><i class="fa fa-graduation-cap ceucolor"></i></a>
-           <a href="nTransactionAdmin.php"><i class="fas fa-file-upload ceucolor"></i></a>
-           <a href="view_pending_requests.php"><i class="fas fa-home ceucolor"></i></a>
-           <a href="https:/www.facebook.com/theCEUofficial/"><i class="fab fa-facebook-f ceucolor"></i></a>
-           <a href="https://www.instagram.com/ceuofficial/"><i class="fab fa-instagram ceucolor"></i></a>
-           <a href="https://twitter.com/ceumalolos"><i class="fab fa-twitter ceucolor"></i></a>
-         </nav>
+   <header class="">
+     <nav class="navbar navbar-expand-lg text-light navbar-dark fixed-top box-shadow py-3">
+       <img class="logo img-fluid mr-2" src="https://cdn.pixabay.com/photo/2012/04/30/10/39/cow-44720_1280.png" alt="">
+       <a class="navbar-brand -5" href="#">texas steakhouse</a>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+         <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+         <div class="ml-auto">
+         <a class="nav-link active btn bg-success btn-success d-inline" href="login.php">Login</a>
+         <a class="nav-link active btn bg-success btn-success d-inline" href="register.php">Sign Up</a>
+       </div>
+       </div>
+     </nav>
+   </header>
 
          <div class="container mt-4 puff-in-center">
              <div class="row">
