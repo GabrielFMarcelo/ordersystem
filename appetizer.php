@@ -30,7 +30,7 @@
             <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
           </div>
           <div class="ml-auto">
-            <a class="text-decoration-none text-success" href="#"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>
+            <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>
           </div>
         </div>
       </nav>
