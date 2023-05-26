@@ -22,7 +22,24 @@ require_once 'resource/php/class/config.php';
     <link rel="icon" href="resource/img/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <h1>Hello!</h1>
+    <header class="">
+      <nav class="navbar navbar-expand-lg text-light navbar-dark fixed-top box-shadow py-3">
+        <img class="logo img-fluid mr-2" src="https://cdn.pixabay.com/photo/2012/04/30/10/39/cow-44720_1280.png" alt="">
+        <a class="navbar-brand -5" href="#">texas steakhouse</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
+          </div>
+          <div class="ml-auto">
+            <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
     <?php
    echo "<br>";
    $view = new view();
