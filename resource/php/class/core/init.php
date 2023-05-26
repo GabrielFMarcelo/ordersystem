@@ -6,7 +6,7 @@ $GLOBALS['config'] = array(
         'host' => '127.0.0.1:3307',
         'username' =>'root',
         'password' =>'',
-        'db'=>'footpage'
+        'db'=>'ordersystem'
     ),
     'remember'=>array(
         'cookie_name' => 'hash',
@@ -19,11 +19,11 @@ $GLOBALS['config'] = array(
 );
 
 spl_autoload_register(function($class){
-    require_once $_SERVER['DOCUMENT_ROOT'].'/ordering/resource/php/class/'.$class.'.php';
+    require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/'.$class.'.php';
 
 });
-require_once $_SERVER['DOCUMENT_ROOT'].'/ordering/resource/php/functions/sanitize.php';
-require_once $_SERVER['DOCUMENT_ROOT'].'/ordering/resource/php/functions/funct.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/functions/sanitize.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/functions/funct.php';
 if(Cookie::exists(Conf::get('remember/cookie_name')) && !Session::exists(Conf::get('session/session_name'))){
     $hash = Cookie::get(Conf::get('remember/cookie_name'));
     $hashCheck = DB::getInstance()->get('user_session', array('hash','=',$hash));
