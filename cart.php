@@ -17,7 +17,9 @@ require_once 'resource/php/class/config.php';
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <title>Your Cart</title>
+    <title>Shopping Cart</title>
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="resource/img/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <h1>Hello!</h1>
