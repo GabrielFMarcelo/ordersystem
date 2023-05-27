@@ -44,12 +44,7 @@ $view = new view;
                     vald();
                     ?>
                   <h4 class="pt-0 mt-0">Register New Account</h4>
-                  <h6 class="text-muted m1 mb-4">We'll check first if you have an existing account</h6>
-                  <div class="form-group mx-auto">
-                    <label for = "email" class=""> Email Address</label>
-                    <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
-                  </div>
-                  <h6 class="text-muted m1 mb-4">If none, fill in the needed information</h6>
+                  <h6 class="text-muted m1 mb-4">Fill in the needed information</h6>
                 <form action="" method="post" class="mx-auto ">
                   <div class=" mx-auto">
                     <div class="form-group mx-auto">
@@ -67,6 +62,10 @@ $view = new view;
                     <div class="form-group mx-auto">
                       <label for = "fullName" class=""> Full Name</label>
                       <input class="form-control"  type = "text" name="fullName" id="fullName" value ="<?php echo input::get('fullName');?>"/required>
+                    </div>
+                    <div class="form-group mx-auto">
+                      <label for = "email" class=""> Email Address</label>
+                      <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
                     </div>
                     <div class="form-group mx-auto text-dark">
                       <label for="College" class="text-dark">College/s to handle</label>
