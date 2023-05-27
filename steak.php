@@ -61,6 +61,11 @@
                     </div>
                     <h6 class="text-success">Serving Time: 15 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="POST">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="g-steak" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded shadow bg-white card-block mb-3 pb-3">
@@ -80,6 +85,11 @@
                     </div>
                     <h6 class="text-success">Serving Time: 15 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="POST">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="s-ribs" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded shadow bg-white card-block mb-3 pb-3">
@@ -99,6 +109,11 @@
                     </div>
                     <h6 class="text-success">Serving Time: 40 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="POST">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="f-ribs" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
                 </div>
             </div>
 

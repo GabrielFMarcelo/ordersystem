@@ -3,6 +3,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 require_once 'resource/php/class/config.php';
 ?>
 
+<?php error_reporting(0); ?>
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
@@ -39,15 +40,33 @@ require_once 'resource/php/class/config.php';
         </div>
       </nav>
     </header>
-    
-    <?php
-   echo "<br>";
-   $view = new view();
-   $view->userInfo();
-   ?>
 
     <?php
-    insertN();
+     $view = new view();
+     $view->showFood();
+    ?>
+
+    <?php
+      insertSalads();
+     ?>
+
+     <?php
+     insertSteaks();
+     ?>
+
+     <?php
+     insertAppetizers();
+      ?>
+
+      <h1>Total Price: ₱
+      <?php
+      $view = new view();
+      $view->totalPrice();
+      ?>
+    </h1>
+
+    <?php
+    deleteT();
      ?>
 
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
