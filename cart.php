@@ -40,6 +40,34 @@ require_once 'resource/php/class/config.php';
       </nav>
     </header>
 
+    <?php
+     $view = new view();
+     $view->showFood();
+    ?>
+
+    <?php
+      insertSalads();
+     ?>
+
+     <?php
+     insertSteaks();
+     ?>
+
+     <?php
+     insertAppetizers();
+      ?>
+
+      <h1>Total Price: ₱
+      <?php
+      $view = new view();
+      $view->totalPrice();
+      ?>
+    </h1>
+
+    <?php
+    deleteT();
+     ?>
+
 
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
