@@ -1,3 +1,10 @@
+<?php
+require_once $_SERVER['DOCUMENT_ROOT'].'/socmed/resource/php/class/core/init.php';
+
+isLogin();
+$user = new User();
+ ?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -27,10 +34,11 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav mx-auto">
-            <a class="nav-link active" href="#home">Home <span class="sr-only">(current)</span></a>
-            <a class="nav-link active" href="#carous">About Us </a>
-            <a class="nav-link active" href="#menu">Main Menu</a>
-            <a class="nav-link active" href="#contact">Contact Us</a>
+            <a class="nav-link active navitem" href="#home">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link active navitem" href="#carous">About Us </a>
+            <a class="nav-link active navitem" href="#menu">Main Menu</a>
+            <a class="nav-link active navitem" href="#contact">Contact Us</a>
+            <a class="nav-link active navitem" href="logout.php">Log Out</a>
           </div>
           <div class="ml-auto">
             <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>

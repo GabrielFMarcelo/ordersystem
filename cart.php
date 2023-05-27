@@ -26,7 +26,7 @@ require_once 'resource/php/class/config.php';
     <header class="">
       <nav class="navbar navbar-expand-lg text-light navbar-dark fixed-top box-shadow py-3">
         <img class="logo img-fluid mr-2" src="https://cdn.pixabay.com/photo/2012/04/30/10/39/cow-44720_1280.png" alt="">
-        <a class="navbar-brand -5" href="#">texas steakhouse</a>
+        <a class="navbar-brand -5" href="homepage.php">texas steakhouse</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -67,7 +67,35 @@ require_once 'resource/php/class/config.php';
 
     <?php
     deleteT();
+
+    <?php
+     $view = new view();
+     $view->showFood();
+    ?>
+
+    <?php
+      insertSalads();
      ?>
+
+     <?php
+     insertSteaks();
+     ?>
+
+     <?php
+     insertAppetizers();
+      ?>
+
+      <h1>Total Price: ₱
+      <?php
+      $view = new view();
+      $view->totalPrice();
+      ?>
+    </h1>
+
+    <?php
+    deleteT();
+     ?>
+
 
      <!-- jQuery first, then Popper.js, then Bootstrap JS -->
      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
