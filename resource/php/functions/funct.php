@@ -265,25 +265,119 @@ function changeP(){
     }
 }
 
-function insertN(){
-  if (isset($_POST['c-salad'])) {
+// INSERT FOODS
+// Salads
+function insertSalads(){
+  if (isset($_POST['cap-salad'])) {
+    $insert = new insert($_POST['cap-salad']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+      echo '';
+    }else{
+      header("Location: cart.php");
+      echo '';
+    }
+
+  }elseif (isset($_POST['c-salad'])){
     $insert = new insert($_POST['c-salad']);
 
     if($insert->insert()){
-      echo '<div class=" col-md-9 alert alert-success alert-dismissible fadeshow"            role="alert">
-            <strong>Holy guacamole!</strong> You have Inserted a Task Successfully.
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>';
+      header("Location: cart.php");
     }else{
-      echo '<div class=" col-md-9 alert alert-danger alert-dismissible fadeshow"            role="alert">
-            <strong>Holy guacamole!</strong> Insert Task Error!
-            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>';
+      header("Location: cart.php");
+    }
+
+  }elseif (isset($_POST['l-potato'])){
+    $insert = new insert($_POST['l-potato']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
     }
   }
 }
- ?>
+
+// Appetizers
+function insertAppetizers(){
+  if (isset($_POST['soup'])) {
+    $insert = new insert($_POST['soup']);
+
+    if (isset($_POST['soup'])) {
+      header("Location: cart.php");
+    }
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+
+  }elseif (isset($_POST['starters'])){
+    $insert = new insert($_POST['starters']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+
+  }elseif (isset($_POST['fries'])){
+    $insert = new insert($_POST['fries']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+  }
+}
+
+// Steaks
+function insertSteaks(){
+  if (isset($_POST['g-steak'])) {
+    $insert = new insert($_POST['g-steak']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+
+  }elseif (isset($_POST['s-ribs'])){
+    $insert = new insert($_POST['s-ribs']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+
+  }elseif (isset($_POST['f-ribs'])){
+    $insert = new insert($_POST['f-ribs']);
+
+    if($insert->insert()){
+      header("Location: cart.php");
+    }else{
+      header("Location: cart.php");
+    }
+  }
+}
+
+function deleteT(){
+  if (isset($_GET['delete'])) {
+      $delete = new delete($_GET['delete']);
+
+      if($delete->deleteTask()){
+        echo '<div class=" col-md-9 alert alert-warning alert-dismissible fadeshow"            role="alert">
+              <strong>Holy guacamole!</strong> You have Deleted a Task Successfully.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+              </button>
+              </div>';
+      }else{
+        echo '';
+      }
+    }
+  }

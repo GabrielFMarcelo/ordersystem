@@ -63,6 +63,11 @@
                     </div>
                     <h6 class="text-success">Serving Time: 10 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="fries" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded shadow bg-white card-block mb-3 pb-3">
@@ -84,6 +89,17 @@
                     </div>
                     <h6 class="text-success">Serving Time: 5 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="soup" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
+
+                    <?php
+                    if (isset($_POST['soup'])) {
+                      header("Location: cart.php");
+                    }
+                    ?>
                 </div>
             </div>
             <div class="row p-2 bg-white border rounded shadow bg-white card-block mb-3 pb-3">
@@ -103,6 +119,11 @@
                     </div>
                     <h6 class="text-success">Serving Time: 20 minutes</h6>
                     <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+
+                    <!-- Form Add to Cart button -->
+                    <form class="btn-cart" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm mt-2" name="starters" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    </form>
                 </div>
             </div>
 

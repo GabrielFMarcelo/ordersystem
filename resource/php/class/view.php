@@ -55,10 +55,23 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
             }
           }
 
-          public function userInfo(){
+          public function totalPrice(){
+            $con = $this->con();
+            $sql = "SELECT SUM(price) AS sum FROM tbl_order";
+            $data = $con->prepare($sql);
+            $data->execute();
+            $result = $data;
+
+            while ($row = $result->fetch()) {
+              echo $row['sum'];
+            }
+          }
+
+          public function showFood(){
+            $user = new User();
             $con = $this->con();
             $id = isset($_GET['id']) ? $_GET['id'] : '';
-            $sql = "SELECT `id`,`u_name`,`f_name`, `price` FROM `tbl_order`";
+            $sql = "SELECT `id`, `f_name`, `price` FROM `tbl_order`";
             $data = $con->prepare($sql);
             $data->execute();
             $result = $data;
@@ -76,25 +89,28 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
               echo "<tr>";
 
               echo "<td>";
-              echo "<a class='name-link' style='color:white' href='show.php?id={$row['id']}'>";
-              echo $row['u_name'];
-              echo "</a>";
+              echo $user->data()->name;
               echo "</td>";
 
               echo "<td>";
-              echo "<a class='name-link' style='color:white' href='show.php?id={$row['id']}'>";
               echo $row['f_name'];
-              echo "</a>";
               echo "</td>";
 
               echo "<td>";
-              echo $row['price'];
+              echo "₱" . $row['price'];
               echo "</td>";
+
+              echo "<td>
+                      <a class='btn btn-danger btn-sm' name='delete' href='cart.php?delete=$row[id]'> Delete Order </a>
+                    </td>";
+
+                    if (isset($_GET['delete'])) {
+                      header("Location: cart.php");
+                    }
 
               echo "</tr>";
 
               echo "</tbody></table>";
             }
           }
-        }
-?>
+}
