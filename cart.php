@@ -11,7 +11,7 @@ require_once 'resource/php/class/config.php';
     <meta charset="utf-8">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="resource/css/appetizer.css">
+    <link rel="stylesheet" href="resource/css/cart.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -58,12 +58,29 @@ require_once 'resource/php/class/config.php';
      insertAppetizers();
       ?>
 
-      <h1>Total Price: ₱
-      <?php
-      $view = new view();
-      $view->totalPrice();
-      ?>
-    </h1>
+<div class="container card w-75 mt-3 border border-dark">
+
+  <h1 class="text-center mt-5 border border-dark bg-light text-dark rounded text-uppercase">Total Price: ₱
+    <?php
+    $view = new view();
+    $view->totalPrice();
+    ?>
+  </h1>
+      <h4 class="text-center text-uppercase mt-3">Mode of payment</h4>
+      <h6 class="text-center text-muted font-weight-normal text-uppercase mb-3">Choose the payment method that suits you</h6>
+
+          <!-- Form Checkout button -->
+          <form class="btn-checkout d-flex flex-column mb-2" action="checkout.php" method="post">
+            <input class="btn w-25 btn-block btn-danger mx-auto text-light" name="checkout" style="font-size: .875rem;" type="submit" value="Checkout">
+          </form>
+
+          <a href="https://www.facebook.com" class="btn btn-block w-25 mx-auto btn-warning">VISA CC<i class="fa fa fa-cc-visa float-left pt-1"></i></a>
+          <a href="https://www.facebook.com" class="btn btn-block w-25 mx-auto btn-dark">American Express CC<i class="fa fa fa-cc-amex float-left pt-1"></i></a>
+          <a class="btn btn-primary btn-block w-25 mx-auto"href="#">GCash</a>
+          <a class="btn btn-success btn-block w-25 mx-auto mb-4"href="#">PayMaya</a>
+        </div>
+      </div>
+
 
     <?php
     deleteT();
