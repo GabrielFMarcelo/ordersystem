@@ -67,33 +67,6 @@ require_once 'resource/php/class/config.php';
 
     <?php
     deleteT();
-
-    <?php
-     $view = new view();
-     $view->showFood();
-    ?>
-
-    <?php
-      insertSalads();
-     ?>
-
-     <?php
-     insertSteaks();
-     ?>
-
-     <?php
-     insertAppetizers();
-      ?>
-
-      <h1>Total Price: ₱
-      <?php
-      $view = new view();
-      $view->totalPrice();
-      ?>
-    </h1>
-
-    <?php
-    deleteT();
      ?>
 
 
