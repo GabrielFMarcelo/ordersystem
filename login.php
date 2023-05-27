@@ -7,7 +7,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , shrink-to-fit=no">
   <title>Login or Sign Up</title>
   <link rel="stylesheet" type="text/css"  href="vendor/css/bootstrap.min.css">
   <link href="vendor/css/all.css" rel="stylesheet">
@@ -21,14 +21,14 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
   <header class="">
     <nav class="navbar navbar-expand-lg text-light navbar-dark fixed-top box-shadow py-3">
       <img class="logo img-fluid mr-2" src="https://cdn.pixabay.com/photo/2012/04/30/10/39/cow-44720_1280.png" alt="">
-      <a class="navbar-brand -5" href="#">texas steakhouse</a>
+      <a class="navbar-brand -5" href="homepage.php">texas steakhouse</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div class="ml-auto">
-        <a class="nav-link active btn bg-success btn-success d-inline" href="login.php">Login</a>
-        <a class="nav-link active btn bg-success btn-success d-inline" href="register.php">Sign Up</a>
+        <a class="nav-link active btn bg-success btn-success d-inline" href="login.php"><i class="fa fa-sign-in mr-1"></i>Login</a>
+        <a class="nav-link active btn bg-success btn-success d-inline" href="register.php"><i class="fa fa-registered mr-1"></i>Sign Up</a>
       </div>
       </div>
     </nav>
@@ -41,18 +41,16 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
                     <h5 class="text-muted m1 mb-4">Sign up or log in to continue</h5>
                     <form class="" action="" method="post" >
                     <?php logd();?>
-                    <input type="text" id="username" class="form-control mb-2" name="username" placeholder="Enter Username" required>
-                    <input type="password" id="defaultLoginFormPassword" class="form-control" placeholder="Enter Password" name ="password" required>
-                    <div class="d-flex justify-content-around">
-                    </div>
+                    <input type="text" id="username" class="form-control mb-2" aria-describedby="emailHelp" name="username" placeholder="Enter Username" required>
+                    <input type="password" id="password" class="form-control" placeholder="Enter Password" name ="password" required>
                     <input type =hidden name="token" value="<?php echo Token::generate(); ?>">
-                    <input  type="submit"  class="btn btn-success btn-block my-4"value="Login"/>
+                    <input  type="submit"  class="btn btn-success btn-block mt-4" value="Login"/>
+                    <a href="register.php" class="btn btn-block bg-info text-light">Register<i class="fa fa-edge float-left pt-1"></i></a>
                     </form>
                     <h6 class="text-center text-muted mt-2 or">or</h6>
-                    <button href="" class="btn btn-block btn-primary">Continue with Facebook<i class="fa fa-facebook-f float-left pt-1"></i></button>
-                    <button href="" class="btn btn-block btn-light border border-dark">Continue with Google<i class="fa fa-google float-left pt-1"></i></button>
-                    <button href="" class="btn btn-block appbt text-light">Continue with Apple<i class="fa fa-apple float-left pt-1"></i></button>
-                    <button href="" class="btn btn-block bg-info text-light">Register<i class="fa fa-edge float-left pt-1"></i></button>
+                    <a href="https://www.facebook.com" class="btn btn-block btn-primary">Continue with Facebook<i class="fa fa-facebook-f float-left pt-1"></i></a>
+                    <a href="https://accounts.google.com/" class="btn btn-block btn-light border border-dark">Continue with Google<i class="fa fa-google float-left pt-1"></i></a>
+                    <a href="https://appleid.apple.com/sign-in" class="btn btn-block appbt text-light">Continue with Apple<i class="fa fa-apple float-left pt-1"></i></a>
                   </div>
                 </div>
 
