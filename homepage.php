@@ -148,7 +148,7 @@
                   <small>Copyright Group 3 BSIT1-A 2022-2023</small>
               </div>
               <div class="col text-right">
-                  <small>Created by: Gabriel Marcelo, Heidelberg Valerio</small>
+                  <small>Created by: Gabriel Marcelo, Heidel Berg Valerio</small>
               </div>
           </div>
       </div>

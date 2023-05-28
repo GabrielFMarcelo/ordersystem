@@ -10,8 +10,10 @@ class insert extends config{
 
   public function insert(){
     $con = $this->con();
+    $user = new User();
     $food;
     $price;
+    $name = $user->data()->name;
 
     if (isset($_POST['c-salad'])) {
       $food = "Classic Caesar Salad";
@@ -43,7 +45,7 @@ class insert extends config{
     }
 
     // ayaw mag-insert kapag may "," yung mga prices
-    $sql = "INSERT INTO `tbl_order`(`f_name`, `price`) VALUES ('$food', '$price')";
+    $sql = "INSERT INTO `tbl_order`(`name`, `f_name`, `price`) VALUES ('$name', '$food', '$price')";
     $data = $con->prepare($sql);
 
     if($data->execute()){

@@ -14,7 +14,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
                   echo 'success';
                 }
         }
-        
+
           public function viewTableData(){
             $con = $this->con();
             $sql = "SELECT * FROM `tbl_order`";
@@ -76,13 +76,18 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
             $data->execute();
             $result = $data;
 
+            echo "<div class='container mt-5 pt-5 mb-5'>";
+            echo "<div class='card col-md-10 border border-dark rounded w-75 mx-auto text-center'>";
+            echo "<h2 class='text-uppercase mt-4'>DIGITAL Receipt</h2>";
+            echo "<h6 class='text-uppercase mb-5 text-muted'>Bill to</h6>";
             while ($row = $result->fetch()) {
-              echo "<h6 class='text-center font-weight-light pt-0 mt-0' style='letter-spacing: ; font-size: 20px;'>click name to view information</h6>";
-              echo "<table class='table table-dark table-hover table-striped col-md-6 mx-auto text-center'>";
-              echo "<thead>
+              echo "<table class='pt-5 table table-hover table-bordered border-black border col-md-10 mx-auto text-center'>";
+              echo "<thead class=''>
                       <tr>
                         <th>Name</th>
                         <th>Type</th>
+                        <th>Price</th>
+                        <th>Action</th>
                       </tr>
                     </thead><tbody>";
 
@@ -112,5 +117,46 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 
               echo "</tbody></table>";
             }
+            echo "</div>";
           }
+
+          public function showTable(){
+            $user = new User();
+            $con = $this->con();
+            $sql = "SELECT * FROM `tbl_tn`";
+            $data = $con->prepare($sql);
+            $data->execute();
+            $result = $data;
+
+            echo "<div class='container mt-5 pt-5 mb-5'>";
+            echo "<div class='card col-md-10 border border-dark rounded w-75 mx-auto text-center'>";
+            echo "<h2 class='text-uppercase mt-4'>Checkout Information</h2>";
+            echo "<h6 class='text-uppercase mb-5 text-muted'>Your order has been processed successfully</h6>";
+            while ($row = $result->fetch()) {
+              echo "<table class='pt-5 table table-hover table-bordered border-black border col-md-10 mx-auto text-center'>";
+              echo "<thead class=''>
+                      <tr>
+                        <th>Name</th>
+                        <th>Table No.</th>
+                      </tr>
+                    </thead><tbody>";
+
+              echo "<tr>";
+
+              echo "<td>";
+              echo $user->data()->name;
+              echo "</td>";
+
+              echo "<td>";
+              echo $row['table'];
+              echo "</td>";
+
+              echo "</tr>";
+
+              echo "</tbody></table>";
+            }
+            echo "</div>";
+          }
+
+
 }

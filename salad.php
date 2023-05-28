@@ -60,11 +60,11 @@
                         <h4 class="mr-1">₱500</h4><span class="strike-text">₱750</span>
                     </div>
                     <h6 class="text-success">Serving Time: 15 minutes</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" name="" type="button">Add to cart</button></div>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button></div>
 
                     <!-- Form Add to Cart button -->
-                    <form class="btn-cart" action="cart.php" method="post">
-                      <input class="btn btn-outline-dark btn-sm mt-2" name="c-salad" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    <form class="btn-cart d-flex flex-column mt-2" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm" name="c-salad" style="font-size: .875rem;" type="submit" value="Add to Cart">
                     </form>
                 </div>
             </div>
@@ -84,11 +84,11 @@
                         <h4 class="mr-1">₱500</h4><span class="strike-text">₱750</span>
                     </div>
                     <h6 class="text-success">Serving Time: 15 minutes</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button></div>
 
                     <!-- Form Add to Cart button -->
-                    <form class="btn-cart" action="cart.php" method="post">
-                      <input class="btn btn-outline-dark btn-sm mt-2" name="cap-salad" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    <form class="btn-cart d-flex flex-column mt-2" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm" name="cap-salad" style="font-size: .875rem;" type="submit" value="Add to Cart">
                     </form>
                 </div>
             </div>
@@ -108,11 +108,11 @@
                         <h4 class="mr-1">₱350</h4><span class="strike-text">$600</span>
                     </div>
                     <h6 class="text-success">Serving Time: 20 minutes</h6>
-                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button><button class="btn btn-outline-dark btn-sm mt-2" type="button">Add to cart</button></div>
+                    <div class="d-flex flex-column mt-4"><button class="btn btn-dark btn-sm" type="button">Details</button></div>
 
                     <!-- Form Add to Cart button -->
-                    <form class="btn-cart" action="cart.php" method="post">
-                      <input class="btn btn-outline-dark btn-sm mt-2" name="l-potato" style="font-size: 25px;" type="submit" value="Add to Cart">
+                    <form class="btn-cart d-flex flex-column mt-2" action="cart.php" method="post">
+                      <input class="btn btn-outline-dark btn-sm" name="l-potato" style="font-size: .875rem;" type="submit" value="Add to Cart">
                     </form>
                 </div>
             </div>

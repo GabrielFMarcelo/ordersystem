@@ -381,3 +381,20 @@ function deleteT(){
       }
     }
   }
+
+  function alert(){
+    if (isset($_POST['checkout'])) {
+        $table = new table($_POST['checkout']);
+
+        if($table->tableNum()){
+          echo '<div class=" col-md-9 alert alert-warning alert-dismissible fadeshow"            role="alert">
+                <strong>Holy guacamole!</strong> You have Deleted a Task Successfully.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                </div>';
+        }else{
+          echo '';
+        }
+      }
+    }
