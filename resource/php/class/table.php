@@ -18,7 +18,7 @@ class table extends config{
       $tables = rand(1,20);
     }
 
-    $sql = "INSERT INTO `tbl_tn`(`table`, `name`) VALUES ('$tables', '$names')";
+    $sql = "INSERT INTO `tbl_tn`(`table`, `name`) VALUES ('$tables', '$names') LIMIT 1";
     $data = $con->prepare($sql);
 
     if($data->execute()){

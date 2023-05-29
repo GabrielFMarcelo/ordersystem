@@ -69,9 +69,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 
           public function showFood(){
             $user = new User();
+            $nameMe = $user->data()->name;
             $con = $this->con();
             $id = isset($_GET['id']) ? $_GET['id'] : '';
-            $sql = "SELECT `id`, `f_name`, `price` FROM `tbl_order`";
+            $sql = "SELECT `id`, `name`, `f_name`, `price` FROM `tbl_order` WHERE name = '$nameMe'";
             $data = $con->prepare($sql);
             $data->execute();
             $result = $data;
@@ -94,7 +95,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
               echo "<tr>";
 
               echo "<td>";
-              echo $user->data()->name;
+              echo $row['name'];
               echo "</td>";
 
               echo "<td>";
@@ -122,8 +123,9 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
 
           public function showTable(){
             $user = new User();
+            $nameMe = $user->data()->name;
             $con = $this->con();
-            $sql = "SELECT * FROM `tbl_tn`";
+            $sql = "SELECT * FROM `tbl_tn` WHERE name = '$nameMe'";
             $data = $con->prepare($sql);
             $data->execute();
             $result = $data;
@@ -144,7 +146,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
               echo "<tr>";
 
               echo "<td>";
-              echo $user->data()->name;
+              echo $row['name'];
               echo "</td>";
 
               echo "<td>";
