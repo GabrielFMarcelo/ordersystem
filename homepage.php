@@ -101,7 +101,7 @@
                 <p class="card-text">Appetizer</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="appetizer.php">View</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="login.php">View</a></button>
                   </div>
                   <small class="text-muted">Menu</small>
                 </div>
@@ -115,7 +115,7 @@
                 <p class="card-text">Steak & Ribs</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="steak.php">View</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="login.php">View</a></button>
                   </div>
                   <small class="text-muted">Menu</small>
                 </div>
@@ -129,7 +129,7 @@
                 <p class="card-text">Salad & Sides</p>
                 <div class="d-flex justify-content-between align-items-center">
                   <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="salad.php">View</a></button>
+                    <button type="button" class="btn btn-sm btn-outline-dark"><a class="text-success text-decoration-none" target="_blank" href="login.php">View</a></button>
                   </div>
                   <small class="text-muted">Menu</small>
                 </div>

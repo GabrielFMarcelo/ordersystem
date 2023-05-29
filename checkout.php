@@ -31,7 +31,7 @@ require_once 'resource/php/class/config.php';
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link" href="homepage.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="template.php">Home <span class="sr-only">(current)</span></a>
           </div>
           <div class="ml-auto">
             <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>

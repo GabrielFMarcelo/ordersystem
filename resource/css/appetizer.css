@@ -15,6 +15,11 @@ html{
   letter-spacing: 1px;
 }
 
+.navitem:hover{
+  border-bottom: 2px solid green;
+  transition: 0.5s;
+}
+
 .logo{
   height: 30px;
   width: 30px;
