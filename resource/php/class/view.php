@@ -56,8 +56,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
           }
 
           public function totalPrice(){
+            $user = new User();
+            $nameMe = $user->data()->name;
             $con = $this->con();
-            $sql = "SELECT SUM(price) AS sum FROM tbl_order";
+            $sql = "SELECT SUM(price) AS sum FROM tbl_order WHERE name = '$nameMe'";
             $data = $con->prepare($sql);
             $data->execute();
             $result = $data;
