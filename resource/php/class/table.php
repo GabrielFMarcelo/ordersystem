@@ -15,10 +15,11 @@ class table extends config{
     $names = $user->data()->name;
 
     if (isset($_POST['checkout'])) {
+      header("Location: checkout.php");
       $tables = rand(1,20);
     }
 
-    $sql = "INSERT INTO `tbl_tn`(`table`, `name`) VALUES ('$tables', '$names') LIMIT 1";
+    $sql = "INSERT INTO `tbl_tn`(`table`, `name`) VALUES ('$tables', '$names')";
     $data = $con->prepare($sql);
 
     if($data->execute()){

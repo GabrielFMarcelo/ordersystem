@@ -127,7 +127,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/ordersystem/resource/php/class/core/ini
             $user = new User();
             $nameMe = $user->data()->name;
             $con = $this->con();
-            $sql = "SELECT * FROM `tbl_tn` WHERE name = '$nameMe'";
+            $sql = "SELECT * FROM `tbl_tn` WHERE name = '$nameMe' LIMIT 1";
             $data = $con->prepare($sql);
             $data->execute();
             $result = $data;
