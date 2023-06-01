@@ -36,6 +36,7 @@ require_once 'resource/php/class/config.php';
             <a class="nav-link active navitem" href="appetizer.php">Appetizer</a>
             <a class="nav-link active navitem" href="steak.php">Steak & Ribs</a>
             <a class="nav-link active navitem" href="salad.php">Salad & Sides</a>
+            <a class="nav-link active navitem" href="logout.php">Log Out</a>
           </div>
           <div class="ml-auto">
             <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>
