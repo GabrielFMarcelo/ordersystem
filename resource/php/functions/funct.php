@@ -46,7 +46,7 @@ function pError($error){
 
 function vald(){
      if(input::exists()){
-      if(Token::check(Input::get('Token'))){
+      if(Token::check(input::get('Token'))){
          if(!empty($_POST['College'])){
              $_POST['College'] = implode(',',input::get('College'));
          }else{
@@ -81,7 +81,7 @@ function vald(){
             )));
 
             if($validate->passed()){
-                $user = new user();
+                $user = new User();
                 $salt = Hash::salt(32);
                 try {
                     $user->create(array(
@@ -124,17 +124,17 @@ function vald(){
         }
 
         function logd(){
-            if(Input::exists()){
-                if(Token::check(Input::get('token'))){
+            if(input::exists()){
+                if(Token::check(input::get('token'))){
                     $validate = new Validate();
                     $validation = $validate->check($_POST,array(
                         'username' => array('required'=>true),
                         'password'=> array('required'=>true)
                     ));
                     if($validation->passed()){
-                        $user = new user();
-                        $remember = (Input::get('remember') ==='on') ? true :false;
-                        $login = $user->login(Input::get('username'),Input::get('password'),$remember);
+                        $user = new User();
+                        $remember = (input::get('remember') ==='on') ? true :false;
+                        $login = $user->login(input::get('username'),input::get('password'),$remember);
                         if($login){
                             if($user->data()->groups == 1){
                                  Redirect::to('template.php');
@@ -156,7 +156,7 @@ function vald(){
         }
 
         function isLogin(){
-            $user = new user();
+            $user = new User();
             if(!$user->isLoggedIn()){
                 Redirect::to('login.php');
             }
@@ -202,7 +202,7 @@ function updateProfile(){
             )));
 
             if($validate->passed()){
-                $user = new user();
+                $user = new User();
 
                 try {
                     $user->update(array(
@@ -241,11 +241,11 @@ function changeP(){
             )));
 
             if($validate->passed()){
-                $user = new user();
+                $user = new User();
                 if(Hash::make(input::get('password_current'),$user->data()->salt) !== $user->data()->password){
                     curpassError();
                 }else{
-                    $user = new user();
+                    $user = new User();
                     $salt = Hash::salt(32);
                     try {
                         $user->update(array(
