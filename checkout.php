@@ -30,8 +30,12 @@ require_once 'resource/php/class/config.php';
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav">
-            <a class="nav-link" href="template.php">Home <span class="sr-only">(current)</span></a>
+          <div class="navbar-nav mx-auto">
+            <a class="nav-link navitem active" href="template.php">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link active navitem" href="appetizer.php">Appetizer</a>
+            <a class="nav-link active navitem" href="steak.php">Steak & Ribs</a>
+            <a class="nav-link active navitem" href="salad.php">Salad & Sides</a>
+            <a class="nav-link active navitem" href="logout.php">Log Out</a>
           </div>
           <div class="ml-auto">
             <a class="text-decoration-none text-success" href="cart.php"><i class="fa fa-shopping-cart cart text-success ml-3 mr-2 mt-2 text-decoration-none" style="font-size: 25px;"></i>Cart</a>
