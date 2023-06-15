@@ -47,11 +47,6 @@ function pError($error){
 function vald(){
      if(input::exists()){
       if(Token::check(input::get('Token'))){
-         if(!empty($_POST['College'])){
-             $_POST['College'] = implode(',',input::get('College'));
-         }else{
-            $_POST['College'] ="";
-         }
         $validate = new Validate;
         $validate = $validate->check($_POST,array(
             'username'=>array(
@@ -75,9 +70,6 @@ function vald(){
             ),
             'email'=>array(
                 'required'=>'true'
-            ),
-            'College'=>array(
-                'required'=>'true'
             )));
 
             if($validate->passed()){
@@ -91,7 +83,6 @@ function vald(){
                         'name'=> input::get('fullName'),
                         'joined'=>date('Y-m-d H:i:s'),
                         'groups'=>1,
-                        'colleges'=> input::get('College'),
                         'email'=> input::get('email'),
                     ));
 
@@ -173,11 +164,6 @@ function profilePic(){
 
 function updateProfile(){
     if(input::exists()){
-        if(!empty($_POST['College'])){
-            $_POST['College'] = implode(',',input::get('College'));
-        }else{
-           $_POST['College'] ="";
-        }
 
         $validate = new Validate;
         $validate = $validate->check($_POST,array(
@@ -196,9 +182,6 @@ function updateProfile(){
                 'required'=>'true',
                 'min'=>5,
                 'max'=>50,
-            ),
-            'College'=>array(
-                'required'=>'true'
             )));
 
             if($validate->passed()){
@@ -208,7 +191,6 @@ function updateProfile(){
                     $user->update(array(
                         'username'=>input::get('username'),
                         'name'=> input::get('fullName'),
-                        'colleges'=> input::get('College'),
                         'email'=> input::get('email')
                     ));
                 } catch (Exception $e) {

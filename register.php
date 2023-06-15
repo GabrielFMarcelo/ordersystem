@@ -67,12 +67,6 @@ $view = new view;
                       <label for = "email" class=""> Email Address</label>
                       <input class="form-control"  type = "text" name="email" id="email" value ="<?php echo input::get('email');?>"/required>
                     </div>
-                    <div class="form-group mx-auto text-dark">
-                      <label for="College" class="text-dark">College/s to handle</label>
-                      <select id="College" name="College[]" class="border border-secondary selectpicker form-control" data-live-search="true" multiple required>
-                        <?php $view->collegeSP2();?>
-                      </select>
-                    </div>
                   </div>
                   <div class=" justify-content-center mx-auto text-center">
                     <div class="form-group mx-auto">
