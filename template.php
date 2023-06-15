@@ -155,7 +155,7 @@ $user = new User();
                   <small>Copyright Group 3 BSIT1-A 2022-2023</small>
               </div>
               <div class="col text-right">
-                  <small>Created by: Gabriel Marcelo, Heidel Berg Valerio</small>
+                  <small>Created by: Gabriel Marcelo, Heidel Berg Valerio, Jairo Garcia, Bea Patrice Cortez, Diane Hipolito</small>
               </div>
           </div>
       </div>
